@@ -1,18 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faBurger, faMagnifyingGlass, faReceipt } from "@fortawesome/free-solid-svg-icons"
+import pocanLogo from "../../public/pocan_logo.png"
+
 function Navbar() {
     return (
-        <nav className="flex w-full justify-between sm:py-4 px-12 bg-green-300 text-white items-center">
-            <div className="flex items-center gap-5">
+        <nav className="flex bg-green-300 py-1 px-3 sm:px-12 py-2 justify-between items-center text-white">
+            <div className="flex items-center gap-3">
                 <span className="">
                     <label htmlFor="search">
-                        <FontAwesomeIcon className="text-lg" icon={faMagnifyingGlass}/>
+                        <FontAwesomeIcon className="text-xl" icon={faMagnifyingGlass}/>
                     </label>
                     </span>
-                <input type="text" id="search" className="w-100 bg-white text-gray-500 rounded py-1 px-3" placeholder="Cari Makanan...."/>
+                <input type="text" id="search" className="bg-white rounded-sm px-2 py-1 sm:py-2 sm:w-120 text-black" placeholder="Cari Makanan...."/>
             </div>
-            <div className="rigth-nav">
-                <h1 className="text-2xl font-bold">INI LOGO</h1>
+            <div className="flex items-center">
+                <div className="hidden sm:flex gap-5 mr-10 text-2xl">
+                    <FontAwesomeIcon icon={faBurger} className="hover:scale-110"/>
+                    <FontAwesomeIcon icon={faReceipt} className="hover:scale-110"/>
+                </div>
+                <img src="/pocan_logo.png" alt="logo" className="w-14 h-14 sm:w-15 sm:h-15"/>
             </div>
         </nav>
     )

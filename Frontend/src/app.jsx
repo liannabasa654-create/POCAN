@@ -5,7 +5,8 @@ export function App() {
   return (
     <>
     <Navbar />
-    <Home></Home>
+    <Home />
+    <BottomMenu />
     </>
   )
 }
