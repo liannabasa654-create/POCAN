@@ -1,24 +1,32 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBurger, faMagnifyingGlass, faReceipt } from "@fortawesome/free-solid-svg-icons"
-import pocanLogo from "../../public/pocan_logo.png"
+import { faMagnifyingGlass, faReceipt, faShop } from "@fortawesome/free-solid-svg-icons"
 
 function Navbar() {
     return (
-        <nav className="flex bg-green-300 py-1 px-3 sm:px-12 py-2 justify-between items-center text-white">
-            <div className="flex items-center gap-3">
+        <nav className="flex bg-green-300 pt-6 sm:pt-2 py-2 px-3 sm:px-12 justify-between items-center text-white fixed sm:static top-0 left-0 w-full">
+            <span className="flex gap-3 items-center text-3xl font-extrabold">
+                <img src="/pocan_logo.png" alt="logo" className="hidden sm:block w-14 h-14 sm:w-15 sm:h-15" />
+                <h1 className="">POCAN</h1>
+            </span>
+            <div className="flex items-center gap-3 sm:ml-10">
                 <span className="">
                     <label htmlFor="search">
-                        <FontAwesomeIcon className="text-xl" icon={faMagnifyingGlass}/>
+                        <FontAwesomeIcon className="text-xl" icon={faMagnifyingGlass} />
                     </label>
-                    </span>
-                <input type="text" id="search" className="bg-white rounded-sm px-2 py-1 sm:py-2 sm:w-120 text-black" placeholder="Cari Makanan...."/>
+                </span>
+                <input type="text" id="search" className="w-62 bg-white rounded-lg px-2 py-1 sm:py-2 sm:w-140 text-black" placeholder="Cari Makanan...." />
             </div>
             <div className="flex items-center">
-                <div className="hidden sm:flex gap-5 mr-10 text-2xl">
-                    <FontAwesomeIcon icon={faBurger} className="hover:scale-110"/>
-                    <FontAwesomeIcon icon={faReceipt} className="hover:scale-110"/>
+                <div className="hidden sm:flex gap-5 mr-10 text-2xl items-center">
+                    <span className="flex gap-1 hover:scale-110">
+                        <FontAwesomeIcon icon={faShop} />
+                        <p className="text-lg">Kantin</p>
+                    </span>
+                    <span className="flex gap-1 hover:scale-110">
+                        <FontAwesomeIcon icon={faReceipt} />
+                        <p className="text-lg">Pesanan</p>
+                    </span>
                 </div>
-                <img src="/pocan_logo.png" alt="logo" className="w-14 h-14 sm:w-15 sm:h-15"/>
             </div>
         </nav>
     )
