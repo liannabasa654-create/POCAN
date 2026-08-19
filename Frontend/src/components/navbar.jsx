@@ -4,8 +4,8 @@ import { faMagnifyingGlass, faReceipt, faShop } from "@fortawesome/free-solid-sv
 function Navbar() {
     return (
         <nav className="flex bg-green-300 pt-6 sm:pt-2 py-2 px-3 sm:px-12 justify-between items-center text-white fixed sm:static top-0 left-0 w-full">
-            <span className="flex gap-3 items-center text-3xl font-extrabold">
-                <img src="/pocan_logo.png" alt="logo" className="hidden sm:block w-14 h-14 sm:w-15 sm:h-15" />
+            <span className="hidden sm:flex gap-3 items-center text-3xl font-extrabold">
+                <img src="/pocan_logo.png" alt="logo" className="w-14 h-14 sm:w-15 sm:h-15" />
                 <h1 className="">POCAN</h1>
             </span>
             <div className="flex items-center gap-3 sm:ml-10">

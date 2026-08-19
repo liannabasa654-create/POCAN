@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^3.5.0",
     "@tailwindcss/vite": "^4.3.3",
     "preact": "^10.29.7",
+    "preact-iso": "^2.12.2",
     "preact-router": "^4.1.2",
     "tailwindcss": "^4.3.3"
   },
