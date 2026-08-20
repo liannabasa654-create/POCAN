@@ -35,12 +35,11 @@ function ScrollUser() {
         onMouseLeave={handleLeft}
         onMouseUp={handleLeft}>
             {box.map(box => {
-                return <div className="flex rounded-lg shrink-0 items-center justify-center select-none w-20 sm:w-30 h-20 sm:h-30 bg-gray-300">{box}</div>
+                return <div className="flex rounded-lg shrink-0 items-center justify-center select-none w-20 sm:w-30 h-20 sm:h-30 bg-gray-300" onClick={() => {location.href = "/profile"}}>{box}</div>
             })}
             <div className="flex w-20 items-center justify-center text-sm sm:text-lg font-semibold shrink-0 whitespace-nowrap">{"> See More"}</div>
         </div>
         </>
     )
 }
-
 export default ScrollUser

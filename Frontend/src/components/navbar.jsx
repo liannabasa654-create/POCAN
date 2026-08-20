@@ -14,7 +14,7 @@ function Navbar() {
                         <FontAwesomeIcon className="text-xl" icon={faMagnifyingGlass} />
                     </label>
                 </span>
-                <input type="text" id="search" className="w-62 bg-white rounded-lg px-2 py-1 sm:py-2 sm:w-140 text-black" placeholder="Cari Makanan...." />
+                <input type="text" id="search" className="w-62 bg-white rounded-lg px-2 py-1 sm:py-2 sm:w-140 text-black" placeholder="Cari Makanan...."/>
             </div>
             <div className="flex items-center">
                 <div className="hidden sm:flex gap-5 mr-10 text-2xl items-center">
