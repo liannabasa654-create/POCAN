@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Order from "../components/Order.jsx"
 
 function Cart() {
     const [items, setItems] = useState(JSON.parse(localStorage.getItem("food")) || []);
@@ -6,20 +7,16 @@ function Cart() {
         localStorage.setItem("food", JSON.stringify(items))
     }, [items])
     console.log(items)
-    if (items.length == 0) return <h1>Gak Ada barang bro</h1>
+    if (items.length == 0) return <div className="h-100 flex flex-col items-center justify-center">
+        <div className="flex items-center justify-center bg-gray-200 p-3 rounded-md shadow-md shadow-blue-200">
+            <h1>Kamu Belum Pesan Apapun 😘</h1>
+        </div>
+    </div>
     return (
         <>
         {items.map(item => {
-            return <div>
-                <h1>{item.name}</h1>
-                <p>Jumlah : {item.amount}</p>
-                <p>Harga : ${item.price}</p>
-                <p>Total : ${item.price * item.amount}</p>
-                <button onClick={(e) => {
-                    const name = e.target.parentElement.firstElementChild.textContent;
-                    const newItem = items.filter(data => data.name != name);
-                    setItems(newItem)
-                }}>Hapus</button>
+            return <div className="p-1">
+                <Order item={item} setItems={setItems}/>
             </div>
         })}
         </>

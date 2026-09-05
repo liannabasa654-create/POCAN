@@ -45,7 +45,7 @@ function Display() {
         <div className="flex flex-col items-center">
             <div className="relative">
                 <span className="absolute left-3 top-3 text-gray-400"><Search/></span>
-                <input type="text" className="border-1 p-3 w-86 rounded-full pl-10 border-green-300 bg-white" placeholder="Cari Makanan atau Minuman..."/>
+                <input type="text" className=" p-3 w-86 rounded-full pl-10 shadow-md shadow-blue-300 bg-white" placeholder="Cari Makanan atau Minuman..."/>
             </div>
             <div className="flex gap-4 overflow-x-auto w-80 mr-4 bg-white px-3 py-1 rounded-xl [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden my-4 ml-4">
                 {user.map(data => {
@@ -67,7 +67,7 @@ function Display() {
                         dataHandler("drink")
                     }}>Minuman</button>
                 </div>
-                <div className={`border-1 border-green-800 absolute w-20 h-7 bg-green-200 top-2 ${option == "all" && "left-2"} ${option == "food" && "left-27 w-21"} ${option == "drink" && "left-54 w-23"} transition-all duration-200 rounded-full z-0`}></div>
+                <div className={`border-1 border-blue-800 absolute w-20 h-7 bg-blue-300 top-2 ${option == "all" && "left-2"} ${option == "food" && "left-27 w-21"} ${option == "drink" && "left-54 w-23"} transition-all duration-200 rounded-full z-0`}></div>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-5 pb-25">
                 {filtered.map(item => {

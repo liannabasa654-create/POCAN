@@ -34,7 +34,7 @@ function Navbar({ setTitle }) {
         <nav className="flex fixed bottom-0 w-full justify-between bg-white px-5 py-3 rounded-t-2xl unset shadow-top">
             {icon.map(item => {
                 return <Link to={item.address}>
-                    <div className={`w-12 rounded-full text-gray-300 h-12 flex flex-col justify-center items-center transition-all duration-200 ease-in-out ${path == item.address && "text-primary scale-115"}`}
+                    <div className={`w-12 rounded-full h-12 flex flex-col justify-center items-center transition-all duration-200 ease-in-out ${path == item.address ? "text-blue-400 scale-115" : "text-gray-300"}`}
                     onClick={() => {
                         setTitle(item.name)
                     }}>
